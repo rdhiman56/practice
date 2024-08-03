@@ -73,19 +73,18 @@ SmallestNumberArraySorting4(2, 5, 1);
 // 5th way findSmallestNumber sorting
 
 function findSmallestNumberSort5(nums) {
- if (nums.length === 0) return 'Array is Empty!!';
+  if (nums.length === 0) return "Array is Empty!!";
 
- nums.sort((a,b) => a-b);
- return nums[0];
+  nums.sort((a, b) => a - b);
+  return nums[0];
 }
 
-console.log(findSmallestNumberSort5([23,89,1,10,77]));
-
+console.log(findSmallestNumberSort5([23, 89, 1, 10, 77]));
 
 // 6th way findSmallestNumber without sorting forEach
 
 function findSmallestNumber6(numbers) {
-    if (numbers.length === 0) return 'Array is Empty!!';
+  if (numbers.length === 0) return "Array is Empty!!";
   let smallestNum = numbers[0];
 
   numbers.forEach((element) => {
@@ -96,4 +95,18 @@ function findSmallestNumber6(numbers) {
 
   return smallestNum;
 }
-console.log(findSmallestNumber6([3, 6,1,78,11,80, 22]));
+console.log(findSmallestNumber6([3, 6, 1, 78, 11, 80, 22]));
+
+// 7th way smallestnumber using Ternary operator using reduce
+function findSmallestNumberUsingTernaryOperator7(numbers) {
+  if (numbers.length === 0) return "Empty Array";
+
+  return numbers.reduce((smallest, current) =>
+    current < smallest ? current : smallest
+  );
+}
+
+console.log(
+  "Smallest Reduce value:",
+  findSmallestNumberUsingTernaryOperator7([3, 7, 9])
+);
