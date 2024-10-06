@@ -1,5 +1,17 @@
 // Check palindromes string
 
+// 3rd way reverse string and match
+
+function palindromes3(inputString){
+    inputString = inputString.toLowerCase();
+    const reverseString = inputString.split('').reverse().join('');
+    if(reverseString === inputString){
+        return true
+    }else{
+        return false
+    }
+}
+ console.log('palindromes3=>', palindromes3("madam"));
 // 2nd way
 function palindromes2(inputString) {
     let start = 0;
@@ -13,7 +25,6 @@ function palindromes2(inputString) {
   }
   
   console.log('palindromes2=>', palindromes2("madam"));
-
 
 
 // 1st way
